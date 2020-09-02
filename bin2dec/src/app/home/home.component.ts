@@ -22,8 +22,8 @@ export class HomeComponent implements OnInit {
       this.data.entrada = null
     } else {
       this.hasError = false
-      this.data.saida = parseInt(this.data.entrada,2).toString()
-  console.log(this.data)
+      this.data.saida = parseInt(this.data.entrada, 2).toString()
+      console.log(this.data)
     }
   }
 
