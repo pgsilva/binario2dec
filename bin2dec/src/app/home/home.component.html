@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-title>Bin2Dec</mat-card-title>
+  <mat-card-subtitle>Insira 8 dígitos binários </mat-card-subtitle>
+  <mat-card-content>
+    <form (ngSubmit)="validaInput()">
+      <p>
+        <mat-form-field>
+          <input type="text"  matInput placeholder="insira aqui" name="entrada" [(ngModel)]="data.entrada">
+        </mat-form-field>
+        <!-- <mat-form-field>
+          <input type="text" maxlength="8" matInput placeholder="insira aqui" name="entrada" [(ngModel)]="data.entrada">
+        </mat-form-field>
+        -->
+      </p>
+
+
+      <p *ngIf="hasError" class="error">
+        Por favor insira apenas dígitos binários.
+      </p>
+
+      <p class="result">
+        <strong>Último resultado:</strong>
+        <br>
+        {{data.saida}}
+      </p>
+
+      <div class="button">
+        <button type="submit" mat-button>Calcular</button>
+      </div>
+
+    </form>
+  </mat-card-content>
+</mat-card>
